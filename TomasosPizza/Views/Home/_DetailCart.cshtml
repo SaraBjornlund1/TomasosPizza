@@ -1,0 +1,22 @@
+﻿@model List<TomasosPizza.Models.Matratt>
+
+<h2>Din varukorg</h2>
+<table>
+    @foreach (var prod in Model)
+    {
+        <tr>
+            <td>@prod.MatrattNamn</td>
+            <td>@prod.Pris :-</td>
+        </tr>
+    }
+    <tr>
+        <td class="psize">Total summa:</td>
+        <td class="psize">@Model.Sum(p => p.Pris)</td>
+    </tr>
+
+</table>
+
+<br /><br />
+
+<a asp-controller="Home" asp-action="NewOrder"> <button>Beställ</button></a>
+

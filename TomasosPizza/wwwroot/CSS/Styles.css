@@ -1,0 +1,156 @@
+﻿body {
+    background-image: url('../images/backg.jpg');
+    height: 100%;
+}
+
+.img {
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+h3, label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
+.rightMenu {
+    float: right;
+}
+
+#productlist {
+    background-color: lightgray;
+    float: left;
+    width: 400px;
+}
+
+#cartinfo {
+    float: right;
+    width: 20%;
+}
+
+.container{
+    margin: auto;
+    width: 60%;
+    height: 20%;
+    border: 3px solid #000000;
+    padding: 10px;
+}
+
+.p{
+    display: inline;
+}
+
+#buy{
+    word-spacing: 50px;
+}
+
+.wrapper{
+    width: 80%;
+    border: 1px solid #000000;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+.firstcontainer{
+    width: 50%;
+    float: left;
+}
+
+footer {
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+    position: absolute;
+    background-color: #333;
+}
+
+#footertext {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.middlewrap {
+    width: 40%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    margin-left: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-style: italic;
+}
+
+.marg{
+    margin-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.divstyle{
+    padding-top: 20px;
+    padding-left: 20px;
+    font-style: italic;
+}
+
+.text{
+    padding-left: 50px;
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.psize {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pcolor {
+    font-weight: bold;
+    color:forestgreen;
+}
+
+.block{
+    display: block;
+}
+

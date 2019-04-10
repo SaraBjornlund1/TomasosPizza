@@ -1,0 +1,67 @@
+﻿@model TomasosPizza.ViewModels.CustomerViewModel
+
+<h1>Registrera dig och skapa ett konto</h1>
+
+<div class="wrapper">
+    <div class="marg">
+        <form asp-controller="Account" asp-action="Register" method="post">
+            <label asp-for="UserName"></label><br />
+            <input asp-for="UserName" />
+            <span asp-validation-for="@Model.UserName"></span>
+
+            <br /><br />
+
+            <label asp-for="Password"></label><br />
+            <input asp-for="Password" />
+            <span asp-validation-for="@Model.Password"></span>
+
+            <br /><br />
+
+            <label>Ange Namn*</label><br />
+            <input asp-for="CurrentCustomer.Namn" />
+            <span asp-validation-for="@Model.CurrentCustomer.Namn"></span>
+
+            <br /><br />
+
+            <label>Ange Email-adress (Valfri)</label><br />
+            <input asp-for="CurrentCustomer.Email" />
+
+            <br /><br />
+
+            <label>Ange Telefonnummer (Valfri)</label><br />
+            <input asp-for="CurrentCustomer.Telefon" />
+
+            <br /><br />
+
+            <label>Ange Gatuadress*</label><br />
+            <input asp-for="CurrentCustomer.Gatuadress" />
+            <span asp-validation-for="@Model.CurrentCustomer.Gatuadress"></span>
+
+            <br /><br />
+
+            <label>Ange Postnummer*</label><br />
+            <input asp-for="CurrentCustomer.Postnr" />
+            <span asp-validation-for="@Model.CurrentCustomer.Postnr"></span>
+
+            <br /><br />
+
+            <label>Ange Post Ort*</label><br />
+            <input asp-for="CurrentCustomer.Postort" />
+            <span asp-validation-for="@Model.CurrentCustomer.Postort"></span>
+
+            <br /><br />
+
+
+            <input type="radio" asp-for="RoleName" value="Administrator" />
+            Admin*
+
+            <input type="radio" asp-for="RoleName" value="Standard" />
+            Standard*
+
+            <br /><br />
+            <button type="submit">Registrera konto</button>
+
+        </form>
+    </div>
+</div>
+

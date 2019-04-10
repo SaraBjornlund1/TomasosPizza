@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/CSS/Styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        <nav>
+            <ul>
+                <li><a asp-controller="Home" asp-action="HomePage">Hem</a></li>
+                <li><a asp-controller="Home" asp-action="About">Om oss</a></li>
+                <partial name="_LoginPartial" />
+            </ul>
+        </nav>
+
+        @RenderBody()
+
+    </div>
+
+    <div>
+        
+    </div>
+
+    <hr />
+
+    <footer id="footertext">
+        Kontaktinformation: <br />
+        Telefon: 079-6584946 <br />
+        Email: Tomasos@pizzeria.se
+    </footer>
+
+</body>
+
+</html>

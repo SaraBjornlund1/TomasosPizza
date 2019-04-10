@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TomasosPizza.ModelsIdentity
+
+@inject SignInManager<ApplicationUser> signInManager
+@inject UserManager<ApplicationUser> userManager
+
+
+@if (signInManager.IsSignedIn(User))
+{
+    <ul class="rightMenu">
+        <li><a asp-controller="Home" asp-action="ViewProducts">Meny</a></li>
+        <li><a asp-controller="Home" asp-action="Update">Redigera profil</a></li>
+        <li><a asp-controller="Account" asp-action="LogOff">Logga ut</a></li>
+
+        @if (User.IsInRole("Administrator"))
+        {
+            <li><a asp-controller="Admin" asp-action="HomePage">Admin</a></li>
+        }
+
+    </ul>
+}
+else
+{
+    <ul class="rightMenu">
+        <li><a asp-controller="Account" asp-action="Login">Logga in</a></li>
+        <li><a asp-controller="Account" asp-action="Register">Skapa användare</a></li>
+    </ul>
+
+}

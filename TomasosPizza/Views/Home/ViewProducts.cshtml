@@ -1,0 +1,51 @@
+﻿@model TomasosPizza.ViewModels.FoodViewModel
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.ajax.unobtrusive/3.2.4/jquery.unobtrusive-ajax.min.js"></script>
+
+<h1>Välkommen!</h1>
+
+<p class="text">Välj i menyn nedan för beställning</p>
+
+<br /><br />
+
+<div class="wrapper">
+    <div class="firstcontainer">
+        <div class="divstyle">
+            @foreach (var item in Model.TypeOfDish)
+            {
+                <p class="psize">@item.Beskrivning</p>
+                foreach (var ing in item.Matratt)
+                {
+                    <p class="p psize">@ing.MatrattNamn</p>
+                    <p class="p">@ing.Pris kr</p>
+
+                    <p class="p">
+                        <a asp-controller="Home"
+                           asp-action="AddToCart"
+                           asp-route-id="@ing.MatrattId"
+                           data-ajax="true"
+                           data-ajax-method="GET"
+                           data-ajax-mode="replace"
+                           data-ajax-update="#cartinfo">Köp</a>
+                    </p>
+                    <br />
+                    <p class="p">@ing.Beskrivning</p>
+
+                    <br />
+
+                    foreach (var i in ing.MatrattProdukt)
+                    {
+                        <p class="p pcolor">@i.Produkt.ProduktNamn</p>
+                    }
+                    <br /><br />
+                }
+            }
+        </div>
+    </div>
+    <div id="cartinfo">
+    </div>
+
+
+</div>
+

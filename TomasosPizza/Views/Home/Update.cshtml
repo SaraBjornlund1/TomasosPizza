@@ -1,0 +1,58 @@
+﻿@model TomasosPizza.ViewModels.CustomerViewModel
+
+<h1>Uppdatera dina uppgifter</h1>
+
+<div class="wrapper">
+    <div class="marg">
+        <form asp-controller="Home" asp-action="Update" method="post">
+
+            @*<label asp-for="UserName"></label><br />
+            <input asp-for="UserName" value="@Model.UserName"/>
+
+            <br /><br />
+
+            <label asp-for="Password"></label><br />
+            <input asp-for="Password" value="@Model.Password"/>*@
+
+            <br /><br />
+
+            <label>Ange namn</label><br />
+            <input asp-for="CurrentCustomer.Namn" value="@Model.CurrentCustomer.Namn" />
+
+            <br /><br />
+
+            <label>Ange Email-adress</label><br />
+            <input asp-for="CurrentCustomer.Email" value="@Model.CurrentCustomer.Email" />
+
+            <br /><br />
+
+            <label>Ange Telefonnummer</label><br />
+            <input asp-for="CurrentCustomer.Telefon" value="@Model.CurrentCustomer.Telefon" />
+
+            <br /><br />
+
+            <label>Ange Gatuadress</label><br />
+            <input asp-for="CurrentCustomer.Gatuadress" value="@Model.CurrentCustomer.Gatuadress" />
+
+            <br /><br />
+
+            <label>Ange Postnummer</label><br />
+            <input asp-for="CurrentCustomer.Postnr" value="@Model.CurrentCustomer.Postnr" />
+
+            <br /><br />
+
+            <label>Ange Post Ort</label><br />
+            <input asp-for="CurrentCustomer.Postort" value="@Model.CurrentCustomer.Postort" />
+
+            <br /><br />
+
+            <!--Gömmer Id-->
+            <input type="hidden" asp-for="CurrentCustomer.KundId" value="@Model.CurrentCustomer.KundId" />
+
+
+            <br />
+            <button type="submit">Uppdatera profil</button>
+
+        </form>
+    </div>
+</div>
